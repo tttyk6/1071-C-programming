@@ -2,23 +2,27 @@
 
 void drawRecfilled(int height,int width,int filled)
 {
-    switch(filled)
+    if(filled)
     {
-    case 1:{
         for(int i=1; i<=height; i++)
         {
-            for(int j=1;j<=width;j++)
+            for(int j=1; j<=width; j++)
             {
-            if(i==1 || i<=height || j==1 || j<=width)
+                if(i==1 || i<=height || j==1 || j<=width)
                     printf("*");
+
 
             }
             printf("\n");
-
         }
+
+
+
     }
-    case 2:
-        {
+
+    else
+    {
+
 
         for(int i=1; i<=height; i++)
         {
@@ -32,17 +36,16 @@ void drawRecfilled(int height,int width,int filled)
             printf("\n");
         }
     }
-    }
-}
 
+
+
+}
 
 
 void drawVerTrifilled(int height, int type, int filled)
 {
-    switch(filled)
+    if(filled)
     {
-
-    case 1:
 
         for(int i=1; i<=height; i++)
         {
@@ -54,8 +57,9 @@ void drawVerTrifilled(int height, int type, int filled)
 
             printf("\n");
         }
-
-    case 0:
+    }
+    else
+    {
 
         for(int i=1; i<=height; i++)
         {
@@ -75,51 +79,59 @@ void drawVerTrifilled(int height, int type, int filled)
 }
 
 
+
 void drawTsoTri(int height, int type, int filled)
 {
-    switch(filled)
-    {
-    case 0:
 
+    if(filled)
+    {
+        int X;
+        X=height;
+        for(int i=1; i<=height; i++)
+        {
+            for(int j=1; j<=i-1; j++)
+            {
+                printf("-");
+            }
+            for(int j=1; j=2*X-1; j++)
+            {
+                if(i==1){
+                printf("*");
+                }
+
+            else if(i>1){
+            printf("*");
+            }
+
+            X=X-1;
+            }
+            printf("\n");
+        }
+
+
+
+
+
+
+
+
+        }
+
+    else
+    {
         for(int i=1; i<=height; i++)
         {
             for(int j=1; j<=height-i; j++)
             {
-                printf(" ");
-            }
-            if(i>1)
-            {
-                printf("*");
-                for(int j=1; j==2*i-1; j++)
-                {
-                    if(i<height)
-                    {
-                        printf(" ");
-                    }
-                    else
-                    {
-                        printf("*");
-                    }
-                    printf("\n");
-                }
-            }
-        }
-    case 1:
 
-        for(int i=1; i<=height; i++)
-        {
-            for(int j=1; j<=height; j++)
-            {
-                printf(" ");
             }
-            for(int j=1; j<=2*i; j++)
-            {
-                printf("*");
-            }
-        }
 
+        }
     }
 }
+
+
+
 
 
 
@@ -170,7 +182,7 @@ int main()
         }
     }
     return 0;
-    }
+}
 
 
 
