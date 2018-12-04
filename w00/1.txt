@@ -1,0 +1,9 @@
+#include <stdio.h> =>標準輸入輸出函數 
+#include <stdlib.h> =>數值與字串轉換.記憶體配置.亂數與其他有用函數 
+#include <iostream.h> =>標準輸入輸出函數 
+#include <math.h>=>數算運算函數 
+#include <string.h>=>C-形態字串處理函數 
+#include <algorithm.h>=>標準資料庫容器處理資料庫的函數 
+#include <functional.h>=>標準資料庫演算的類別與函數 
+#include <time.h>=>處理時間日期函數 
+#include <memory.h>=>標準資料庫記憶體配置的類別與函數
